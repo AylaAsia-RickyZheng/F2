@@ -8,7 +8,9 @@ import { deepMix, isWx, isMy, addEventListener, removeEventListener } from '../u
 
 let Hammer;
 if (!isWx && !isMy) {
-  Hammer = require('hammerjs');
+  // Hammer = require('hammerjs');
+  import HammerUtil from 'hammerjs';
+  Hammer = HammerUtil
 }
 
 const TOUCH_EVENTS = [
